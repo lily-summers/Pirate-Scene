@@ -19,7 +19,7 @@ public class TreeInteraction : MonoBehaviour
         float dist = Vector3.Distance(player.transform.position, this.transform.position);
         if (dist < 3)
         {
-            if (Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("touch fuzzy, get dizzy\n");
                 coconut.useGravity = true;
