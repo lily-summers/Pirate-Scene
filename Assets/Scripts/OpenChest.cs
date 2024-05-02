@@ -6,6 +6,7 @@ public class OpenChest : MonoBehaviour
 {
     public GameObject player;
     public Animator animator;
+    public AudioSource audiosource;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +18,11 @@ public class OpenChest : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, this.transform.position);
-        Debug.Log(dist);
         if (dist < 3)
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
+                audiosource.Play();
                 Debug.Log("treasure? i barely know her.\n");
                 animator.SetTrigger("open");
             }

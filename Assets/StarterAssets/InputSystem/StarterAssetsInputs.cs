@@ -46,7 +46,7 @@ namespace StarterAssets
 #endif
 
 
-		public void MoveInput(Vector2 newMoveDirection)
+        public void MoveInput(Vector2 newMoveDirection)
 		{
 			move = newMoveDirection;
 		} 
@@ -75,6 +75,11 @@ namespace StarterAssets
 		{
 			Cursor.lockState = newState ? CursorLockMode.Locked : CursorLockMode.None;
 		}
-	}
+
+        public void OnQuit()
+        {
+            Application.Quit();
+        }
+    }
 	
 }

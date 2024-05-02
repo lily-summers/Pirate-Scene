@@ -6,6 +6,7 @@ public class TreeInteraction : MonoBehaviour
 {
     public GameObject player;
     public Rigidbody coconut;
+    public AudioSource audiosource;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +18,7 @@ public class TreeInteraction : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, this.transform.position);
+        audiosource.volume = dist / 26;
         if (dist < 3)
         {
             if (Input.GetKeyDown(KeyCode.E))
